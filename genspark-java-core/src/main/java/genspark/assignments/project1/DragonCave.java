@@ -1,11 +1,9 @@
 package genspark.assignments.project1;
 
-import genspark.assignments.Assignment;
-
 import java.util.Scanner;
 import java.util.Random;
 
-public class DragonCave implements Assignment {
+public class DragonCave {
 
     private static void startGame() {
         System.out.println("You are in a land full of dragons, In front of you");
