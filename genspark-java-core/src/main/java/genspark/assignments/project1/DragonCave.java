@@ -1,10 +1,8 @@
-package genspark.assignments.project1;
-
 import java.util.Scanner;
 import java.util.Random;
 
 public class DragonCave {
-
+    //Declarative method naming, everything is self explanitory. 
     private static void startGame() {
         System.out.println("You are in a land full of dragons, In front of you");
         System.out.println("you see two caves. In one cave the dragon is friendly");

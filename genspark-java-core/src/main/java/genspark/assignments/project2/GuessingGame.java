@@ -1,11 +1,11 @@
-package com.company;
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class GuessingGame {
+    //Hard coded limit of tries to 6
     private static int limit = 6;
 
+    //Ask for the name of the player from console and returns name
     private static String askName() {
         Scanner scanner = new Scanner(System.in);
         String name = "";
@@ -17,11 +17,13 @@ public class GuessingGame {
         return name;
     }
 
+    //Console out question
     private static void askQuestion(String player) {
         System.out.println(String.format("Well %s, I am thinking of a number between 1 and 20.", player));
         System.out.println("Take a guess.");
     }
 
+    //start running the guessing game where the system picks a random number between 1-20 and the user must guess it within tries
     private static void startGuessing(String player) {
         int tries = 0;
         int number = new Random().nextInt(20) + 1;
@@ -51,6 +53,7 @@ public class GuessingGame {
         }
     }
 
+    //Returns True if useer wants to keep playing else will keep asking
     private static boolean keepPlaying() {
         Scanner scanner = new Scanner(System.in);
         while(true) {
@@ -62,6 +65,7 @@ public class GuessingGame {
             if (response.strip().equalsIgnoreCase("n")) return false;
         }
     }
+
     public static void main(String[] args) {
 	// write your code here
         String name = askName();
