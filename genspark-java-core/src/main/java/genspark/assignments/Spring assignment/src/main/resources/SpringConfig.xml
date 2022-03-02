@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="com.genspark.school.Address">
+        <property name="city" value="San Jose"/>
+        <property name="state" value="CA"/>
+        <property name="country" value="USA"/>
+    </bean>
+
+    <bean id="student" class="com.genspark.school.Student">
+        <property name="studentID" value="123"/>
+        <property name="name" value="Travis"/>
+        <property name="contactNumbers">
+            <list>
+                <value>Home 425-244-2331</value>
+                <value>Mobile 924-111-2331</value>
+                <value>Work 321-233-1231</value>
+            </list>
+        </property>
+        <property name="address" ref="address"/>
+    </bean>
+</beans>
